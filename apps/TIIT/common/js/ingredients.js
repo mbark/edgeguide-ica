@@ -30,33 +30,47 @@ currentPage.init = function() {
 	$("#header-title").html("Ingredients");
 	addEventsToList(map["" + eventId]);
 	
-	addBackButton();
+	setBackButton();
+	setCollaboratorButton();
 };
 
-function addBackButton() {
+function setBackButton() {
 	var backButton = $('<a></a>')
 						.attr('href','#')
 						.text('Back')
 						.click(goBack);
-	var backButtonDiv = $("<div></div>").class('backButtonDiv').append(backButton);
-	var title = $("<h2>Ingredients</h2>");
+	$("#header-back-button").html(backButton);
+}
+
+function setCollaboratorButton(){
 	var collaboratorsLink = $("<a></a>")
-								.attr('href','#')
-								.text('Collaborators')
-								.click(goToCollaborators);
-	var collaboratorsLinkDiv = $("<div></div>").class('collaboratorLinkDiv').append(collaboratorsLink);
-	$("#header").html("").append(backButtonDiv).append(title).append(collaboratorsLinkDiv);
+						.attr('href','#')
+						.text('Collaborators')
+						.click(goToCollaborators);
+	$("#header-next-button").html(collaboratorsLink);
+}
+
+function removeBackButton() {
+	$("#header-back-button").html("");
+}
+
+function removeNextButton() {
+	$("#header-next-button").html("");
 }
 
 function goToCollaborators() {
 	pagesHistory.push("login.html");
 	$("#main").load("collaborators.html", function(){
+		removeBackButton();
+		removeNextButton();
 		currentPage.init();
 	});
 }
 
 function goBack() {
 	$("#main").load(pagesHistory.pop(), function(){
+		removeBackButton();
+		removeNextButton();
 		currentPage.init();
 	});
 }
