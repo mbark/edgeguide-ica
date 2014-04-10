@@ -142,7 +142,9 @@ body.login-screen {
 	float: left;
 	height: 60px;
 	line-height: 60px;
-	text-align: right;
-	padding-right: 10px;
+	text-align: center;
+	border-left: 1px solid #c0c5cb;
+	margin-right: -1px;
+}
 
 }
