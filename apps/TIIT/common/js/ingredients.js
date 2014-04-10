@@ -28,6 +28,13 @@ var map= {
 currentPage = {};
 currentPage.init = function() {
 	$("#header-title").html("Ingredients");
+	$("#footer>div>").click(function() {
+		ingredient = { name: "Rice" };
+		map[eventId].push(ingredient);
+		$('#ingredient-list').append(
+				'<li data-icon="false">' + '<i class="fa fa-circle-o " /><a href="#"><div class="inner">' + ingredient.name + '</div></a><i class="fa fa-trash-o" /></li>');
+		$("#ingredient-list").listview().listview("refresh");
+	});
 	addEventsToList(map["" + eventId]);
 	
 	setBackButton();
