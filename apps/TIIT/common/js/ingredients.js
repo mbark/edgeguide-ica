@@ -28,7 +28,7 @@ var map= {
 currentPage = {};
 currentPage.init = function() {
 	$("#header-title").html("Ingredients");
-	$("#footer>div>").click(function() {
+	$("#footer>div>").unbind('click').bind('click', function() {
 		ingredient = { name: "Rice" };
 		map[eventId].push(ingredient);
 		$('#ingredient-list').append(
