@@ -24,9 +24,12 @@
 		</connectionPolicy>
 		<loadConstraints maxConcurrentConnectionsPerNode="2" />
 	</connectivity>
-
-	<procedure name="getStories"/>
-
-	<procedure name="getStoriesFiltered"/>
+	
+	<procedure name="doLogin"/>
+	<procedure name="getEvents"/>
+	<procedure name="addEvent"/>
+	<procedure name="addCollaborator"/>
+	<procedure name="addIngredientToEvent"/>
+	<procedure name="checkIngredientBought"/>
 	
 </wl:adapter>
