@@ -30,6 +30,7 @@ function wlCommonInit(){
 	
 	$('#main').load('login.html', function() {
 		currentPage.init();
+		// currentPage.loadPage();
 	});
 	
 }
