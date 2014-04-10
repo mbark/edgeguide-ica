@@ -8,9 +8,105 @@ a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, c
 body {
 	height: 460px;
 	margin: 0 auto;
-	width: 320px;
+	width: 100%;
+	text-align: center;
+	
+}
+.ui-page {
+    padding-top: 60px !important;
+}
+#header {
+	background: #4f5f6f;
+	color: #fff;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+#header h3 {
+	font-weight: normal;
+	height: 60px;
+	line-height: 60px;
+	padding: 0;
+	margin: 0;
+	font-style: 0;
+	font-family: 'Open sans';
+	text-shadow:0 0 0;
+}
+#footer {
+	border: 0;
+}
+#footer > .ui-btn {
+	width: 100%;
+	border: 0;
+	text-shadow: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+	background: #4f5f6f;
+}
+#footer a {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Open Sans';
+	font-weight: normal;
 }
 
-.ui-page {
-    padding-top: 40px !important;
+#footer > .ui-btn:hover {
+	background: #5b6f82;
+}
+#footer i.fa-facebook {
+	margin-right: 10px;
+}
+
+i.fa {
+	font-size: 18px;
+}
+
+body.login-screen {
+	background: #59c2e6;
+}
+
+#logo {
+	margin: 0 auto;
+}
+
+#page {
+	background: 0;
+	margin: 0 auto;
+}
+
+#event-list {
+	margin-top: -12px;
+}
+
+#event-list li a {
+	height: 60px;
+	line-height: 60px;
+	width: 80%;
+	margin: 0;
+	padding: 0;
+	float: left;	
+	padding-left: 15px;
+	border: 0;
+	background: #fff;
+}
+#event-list li:nth-child(2) > a {
+	background: #eee;
+}
+#event-list li:nth-child(2) > i {
+	background: #eee;
+}
+#event-list li i {
+	width: 10%;
+	margin: 0;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	text-align: right;
+	padding-right: 10px;
+
 }

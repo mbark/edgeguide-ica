@@ -3,7 +3,13 @@
  */
 currentPage = {};
 currentPage.init = function() {
+	$("#header-title").html("Events");
+	$("#header").show();
+	$('#footer').html('<a href="#" data-role="button" class="ui-block-a" id="add-button"><i class="fa fa-plus" /></a>');
+	$("#add-button").button();
+
 	var events = [];
+	$('body').removeClass();
 	events.push({
 		name : "Picnic på Djurgårn",
 		id : 0
@@ -16,12 +22,11 @@ currentPage.init = function() {
 	addEventsToList(events);
 };
 
-var fontAwesomeTrashBin = '<i class="fa fa-trash-o">';
+var fontAwesomeTrashBin = '<i class="fa fa-trash-o delete-event-icon">';
 function addEventsToList(events) {
 	$.each(events, function(i, event) {
 		$('#event-list').append(
-				'<li data-id="' + event.id + '"data-icon="false"><a href="#" onclick="currentPage.loadPage(\'ingredients.html\',' + event.id + ');">' + event.name + '</a>'
-				//+ '<a href="#">' + fontAwesomeTrashBin + '</a>'
+				'<li data-icon="false"><a href="#" onclick="currentPage.loadPage(\'ingredients.html\',' + event.id + ');">' + event.name + '</a>'
 				+ '</li>');
 	});
 	$("#event-list").listview();
