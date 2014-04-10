@@ -2,16 +2,20 @@ currentPage = {};
 currentPage.init = function() {
 	var collaborators= [];
 	collaborators.push({
-		name : "Jonas Sköld"
+		name : "Jonas Sköld",
+		image: "images/jonas.png"
 	});
 	collaborators.push({
-		name : "Martin Barksten"
+		name : "Martin Barksten",
+		image: "images/martin.png"
 	});
 	collaborators.push({
-		name : "Nils Dahlbom Norgren"
+		name : "Nils Dahlbom Norgren",
+		image: "images/nils.png"
 	});
 	collaborators.push({
-		name : "Per Classon"
+		name : "Per Classon",
+		image: "images/per.png"
 	});
 	
 	addCollaboratorsToList(collaborators);
@@ -22,7 +26,7 @@ currentPage.init = function() {
 function addCollaboratorsToList(collaborators) {
 	$.each(collaborators, function(i, collaborator) {
 		$('#collaborator-list').append(
-				'<li><a href="#">' + collaborator.name + '</a>' + '</li>');
+				'<li data-icon="false"><div class="face-pic"><img src="' + collaborator.image + '" /></div><a href="#">' + collaborator.name + '</a>' + '<i class="fa fa-facebook" /></li>');
 	});
 	$("#collaborator-list").listview().listview("refresh");
 }

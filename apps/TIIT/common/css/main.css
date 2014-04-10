@@ -183,3 +183,53 @@ body.login-screen {
 #ingredient-list li a .inner {
 	padding-left: 30px;
 }
+
+
+
+#collaborator-list li {
+	padding: 0;
+}
+#collaborator-list li a {
+	height: 60px;
+	line-height: 60px;
+	width: 60%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: #fff;
+	font-weight: normal;
+	float: left;
+}
+#collaborator-list li:nth-child(even) > a, #collaborator-list li:nth-child(even) > i, #collaborator-list li:nth-child(even) > .face-pic {
+	background: #eee;
+}
+#collaborator-list li .face-pic {
+	width: 20%;
+	float: left;	
+	margin: 0;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: normal;
+}
+#collaborator-list li .face-pic img {
+	height: 50px;
+	padding: 5px 0;
+
+	}
+#collaborator-list li i.fa-facebook {
+	width: 20%;
+	float: left;	
+	margin: 0;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: normal;
+	border-left: 1px solid #c0c5cb;
+	margin-right: -1px;
+}
+#collaborator-list li a .inner {
+	padding-left: 30px;
+}
