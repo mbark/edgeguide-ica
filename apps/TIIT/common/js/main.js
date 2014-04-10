@@ -37,7 +37,7 @@ function wlCommonInit(){
 function setBackButton() {
 	var backButton = $('<a></a>')
 						.attr('href','#')
-						.text('Back')
+						.html('<i class="fa fa-caret-left"></i>')
 						.click(goBack);
 	$("#header-back-button").html(backButton);
 }

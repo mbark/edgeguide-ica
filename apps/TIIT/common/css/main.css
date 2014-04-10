@@ -22,6 +22,26 @@ body {
 	border: 0;
 	padding: 0;
 }
+#header-back-button a, #header-next-button a {
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+#header-back-button {
+	width: 20%;
+	height: 60px;
+	line-height: 60px;
+	float: left;
+}
+#header-next-button {
+	width: 20%;
+	height: 60px;
+	line-height: 60px;
+	float: right;
+}
 #header h3 {
 	font-weight: normal;
 	height: 60px;

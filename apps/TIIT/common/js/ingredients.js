@@ -44,7 +44,7 @@ currentPage.init = function() {
 function setCollaboratorButton(){
 	var collaboratorsLink = $("<a></a>")
 						.attr('href','#')
-						.text('Collaborators')
+						.html('<i class="fa fa-user"></i>') 
 						.click(goToCollaborators);
 	$("#header-next-button").html(collaboratorsLink);
 }
