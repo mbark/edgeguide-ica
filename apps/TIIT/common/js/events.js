@@ -14,10 +14,13 @@ currentPage.init = function() {
 	addEventsToList(events);
 };
 
+var fontAwesomeTrashBin = '<i class="fa fa-trash-o">';
 function addEventsToList(events) {
 	$.each(events, function(i, event) {
 		$('#event-list').append(
-				'<li><a href="#">' + event.name + '</a>' + '</li>');
+				'<li data-icon="false"><a href="#">' + event.name + '</a>'
+				//+ '<a href="#">' + fontAwesomeTrashBin + '</a>'
+				+ '</li>');
 	});
-	$("#event-list").listview().listview("refresh");
+	$("#event-list").listview();
 }
