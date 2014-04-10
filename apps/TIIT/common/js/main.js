@@ -1,3 +1,6 @@
+var pagesHistory = [];
+var currentPage = {};
+
 function wlCommonInit(){
 
 	/*
@@ -20,5 +23,26 @@ function wlCommonInit(){
 	 */
 	
 	// Common initialization code goes here
-
+	WL.Client.connect({
+		onSuccess: onConnectSuccess,
+		onFailure: onConnectFailure
+	});
+	
+	$('#gotologin').click(function(){
+		$('#main').load('login.html', function() {
+			currentPage.init();
+		});
+	});
+	
 }
+
+function onConnectSuccess() {
+	
+}
+
+function onConnectFailure(response) {
+	console.log(response);
+}
+
+
+
