@@ -27,14 +27,7 @@ var map= {
 
 currentPage = {};
 currentPage.init = function() {
-//	var ingredients = [];
-//	ingredients.push({
-//		name : "Blomkål"
-//	});
-//	ingredients.push({
-//		name : "Saftsoppa"
-//	});
-//	
+	$("#header-title").html("Ingredients");
 	addEventsToList(map["" + eventId]);
 	
 	addBackButton();
@@ -59,7 +52,7 @@ function goBack() {
 function addEventsToList(ingredients) {
 	$.each(ingredients, function(i, ingredient) {
 		$('#ingredient-list').append(
-				'<li><a href="#">' + ingredient.name + '</a>' + '</li>');
+				'<li data-icon="false"><a href="#">' + ingredient.name + '</a>' + '</li>');
 	});
 	$("#ingredient-list").listview().listview("refresh");
 }
