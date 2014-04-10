@@ -64,7 +64,7 @@ function goBack() {
 function addEventsToList(ingredients) {
 	$.each(ingredients, function(i, ingredient) {
 		$('#ingredient-list').append(
-				'<li data-icon="false"><a href="#">' + ingredient.name + '</a>' + '</li>');
+				'<li data-icon="false">' + '<i class="fa fa-circle-o " /><a href="#"><div class="inner">' + ingredient.name + '</div></a><i class="fa fa-trash-o" /></li>');
 	});
 	$("#ingredient-list").listview().listview("refresh");
 }

@@ -118,33 +118,48 @@ body.login-screen {
 #event-list {
 	margin-top: -12px;
 }
-
+#ingredient-list li {
+	padding: 0;
+}
 #ingredient-list li a {
 	height: 60px;
 	line-height: 60px;
-	width: 80%;
+	width: 60%;
 	margin: 0;
 	padding: 0;
-	float: left;	
-	padding-left: 15px;
 	border: 0;
 	background: #fff;
+	font-weight: normal;
+	float: left;
 }
-#ingredient-list li:nth-child(2) > a {
+#ingredient-list li:nth-child(even) > a {
 	background: #eee;
 }
-#ingredient-list li:nth-child(2) > i {
+#ingredient-list li:nth-child(even) > i {
 	background: #eee;
 }
-#ingredient-list li i {
-	width: 10%;
+#ingredient-list li i.fa-circle-o {
+	width: 20%;
+	float: left;	
 	margin: 0;
 	float: left;
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
+	font-weight: normal;
+}
+#ingredient-list li i.fa-trash-o {
+	width: 20%;
+	float: left;	
+	margin: 0;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: normal;
 	border-left: 1px solid #c0c5cb;
 	margin-right: -1px;
 }
-
+#ingredient-list li a .inner {
+	padding-left: 30px;
 }
