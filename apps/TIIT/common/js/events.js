@@ -4,8 +4,9 @@
 currentPage = {};
 currentPage.init = function() {
 	var events = [];
+	$('body').removeClass();
 	events.push({
-		name : "Picnic på Djurgårn"
+		name : "Picnic på Djurårnn"
 	});
 	events.push({
 		name : "Studs event"
