@@ -28,10 +28,8 @@ function wlCommonInit(){
 		onFailure: onConnectFailure
 	});
 	
-	$('#gotologin').click(function(){
-		$('#main').load('login.html', function() {
-			currentPage.init();
-		});
+	$('#main').load('login.html', function() {
+		currentPage.init();
 	});
 	
 }
