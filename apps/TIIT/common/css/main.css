@@ -10,3 +10,7 @@ body {
 	margin: 0 auto;
 	width: 320px;
 }
+
+.ui-page {
+    padding-top: 40px !important;
+}
