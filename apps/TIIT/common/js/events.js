@@ -26,8 +26,7 @@ var fontAwesomeTrashBin = '<i class="fa fa-trash-o delete-event-icon">';
 function addEventsToList(events) {
 	$.each(events, function(i, event) {
 		$('#event-list').append(
-				'<li data-icon="false"><a href="#" onclick="currentPage.loadPage(\'ingredients.html\',' + event.id + ');">' + event.name + '</a>'
-				+ '</li>');
+				'<li data-icon="false"><a href="#" onclick="currentPage.loadPage(\'ingredients.html\',' + event.id + ');"><div class="inner">' + event.name + '</div></a>' + fontAwesomeTrashBin + '</li>');
 	});
 	$("#event-list").listview();
 }

@@ -79,9 +79,6 @@ body.login-screen {
 	margin: 0 auto;
 }
 
-#event-list {
-	margin-top: -12px;
-}
 
 #event-list li a {
 	height: 60px;
@@ -90,9 +87,15 @@ body.login-screen {
 	margin: 0;
 	padding: 0;
 	float: left;	
-	padding-left: 15px;
+
 	border: 0;
 	background: #fff;
+	font-weight: normal;
+	font-family: 'Open sans';
+	text-shadow: none;
+}
+#event-list li a .inner {
+	padding-left: 30px;
 }
 #event-list li:nth-child(2) > a {
 	background: #eee;
@@ -101,12 +104,13 @@ body.login-screen {
 	background: #eee;
 }
 #event-list li i {
-	width: 10%;
+	width: 20%;
 	margin: 0;
 	float: left;
 	height: 60px;
 	line-height: 60px;
-	text-align: right;
-	padding-right: 10px;
+	text-align: center;
+	border-left: 1px solid #c0c5cb;
+	margin-right: -1px;
 
 }
