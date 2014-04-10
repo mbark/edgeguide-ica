@@ -34,6 +34,30 @@ function wlCommonInit(){
 	
 }
 
+function setBackButton() {
+	var backButton = $('<a></a>')
+						.attr('href','#')
+						.text('Back')
+						.click(goBack);
+	$("#header-back-button").html(backButton);
+}
+
+function removeBackButton() {
+	$("#header-back-button").html("");
+}
+
+function removeNextButton() {
+	$("#header-next-button").html("");
+}
+
+function goBack() {
+	$("#main").load(pagesHistory.pop(), function(){
+		removeBackButton();
+		removeNextButton();
+		currentPage.init();
+	});
+}
+
 function onConnectSuccess() {
 	
 }

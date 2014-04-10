@@ -34,14 +34,6 @@ currentPage.init = function() {
 	setCollaboratorButton();
 };
 
-function setBackButton() {
-	var backButton = $('<a></a>')
-						.attr('href','#')
-						.text('Back')
-						.click(goBack);
-	$("#header-back-button").html(backButton);
-}
-
 function setCollaboratorButton(){
 	var collaboratorsLink = $("<a></a>")
 						.attr('href','#')
@@ -50,25 +42,9 @@ function setCollaboratorButton(){
 	$("#header-next-button").html(collaboratorsLink);
 }
 
-function removeBackButton() {
-	$("#header-back-button").html("");
-}
-
-function removeNextButton() {
-	$("#header-next-button").html("");
-}
-
 function goToCollaborators() {
-	pagesHistory.push("login.html");
+	pagesHistory.push("ingredients.html");
 	$("#main").load("collaborators.html", function(){
-		removeBackButton();
-		removeNextButton();
-		currentPage.init();
-	});
-}
-
-function goBack() {
-	$("#main").load(pagesHistory.pop(), function(){
 		removeBackButton();
 		removeNextButton();
 		currentPage.init();
