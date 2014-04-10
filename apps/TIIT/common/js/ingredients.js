@@ -46,7 +46,7 @@ function setCollaboratorButton(){
 						.attr('href','#')
 						.html('<i class="fa fa-user"></i>') 
 						.click(goToCollaborators);
-	$("#header-next-button").html(collaboratorsLink);
+	$("#header-next-button").html(collaboratorsLink).addClass('active');
 }
 
 function goToCollaborators() {

@@ -39,15 +39,15 @@ function setBackButton() {
 						.attr('href','#')
 						.html('<i class="fa fa-caret-left"></i>')
 						.click(goBack);
-	$("#header-back-button").html(backButton);
+	$("#header-back-button").html(backButton).addClass('active');
 }
 
 function removeBackButton() {
-	$("#header-back-button").html("");
+	$("#header-back-button").html("").removeClass('active');
 }
 
 function removeNextButton() {
-	$("#header-next-button").html("");
+	$("#header-next-button").html("").removeClass('active');
 }
 
 function goBack() {

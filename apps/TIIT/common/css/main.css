@@ -36,11 +36,19 @@ body {
 	line-height: 60px;
 	float: left;
 }
+#header-back-button.active {
+	border-right: 1px solid #424f5c;
+	margin-left: -1px;
+}
 #header-next-button {
 	width: 20%;
 	height: 60px;
 	line-height: 60px;
 	float: right;
+}
+#header-next-button.active {
+	border-left: 1px solid #424f5c;
+	margin-right: -1px;
 }
 #header h3 {
 	font-weight: normal;
