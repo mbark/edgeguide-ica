@@ -3,6 +3,7 @@
  */
 currentPage = {};
 currentPage.init = function() {
+	$("#header").show();
 	var events = [];
 	$('body').removeClass();
 	events.push({
