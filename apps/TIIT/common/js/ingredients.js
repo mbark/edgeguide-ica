@@ -19,13 +19,17 @@ currentPage.init = function() {
 function addBackButton() {
 	var backButton = $('<a></a>')
 						.attr('href','#')
+						.text('Back')
 						.click(goBack);
-	var headerContent = backButton;
-	$("#header").html(headerContent);
+	var backButtonDiv = $("<div></div>").class('backButtonDiv').append(backButton);
+	var title = $("<h2>Ingredients</h2>");
+	$("#header").html("").append(backButtonDiv).append(title);
 }
 
 function goBack() {
-	
+	$("#main").load(pagesHistory.pop(), function(){
+		currentPage.init();
+	});
 }
 
 function addEventsToList(ingredients) {
