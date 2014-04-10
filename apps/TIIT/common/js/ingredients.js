@@ -40,7 +40,19 @@ function addBackButton() {
 						.click(goBack);
 	var backButtonDiv = $("<div></div>").class('backButtonDiv').append(backButton);
 	var title = $("<h2>Ingredients</h2>");
-	$("#header").html("").append(backButtonDiv).append(title);
+	var collaboratorsLink = $("<a></a>")
+								.attr('href','#')
+								.text('Collaborators')
+								.click(goToCollaborators);
+	var collaboratorsLinkDiv = $("<div></div>").class('collaboratorLinkDiv').append(collaboratorsLink);
+	$("#header").html("").append(backButtonDiv).append(title).append(collaboratorsLinkDiv);
+}
+
+function goToCollaborators() {
+	pagesHistory.push("login.html");
+	$("#main").load("collaborators.html", function(){
+		currentPage.init();
+	});
 }
 
 function goBack() {
