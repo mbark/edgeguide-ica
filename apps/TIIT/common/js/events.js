@@ -3,7 +3,11 @@
  */
 currentPage = {};
 currentPage.init = function() {
+	$("#header-title").html("Events");
 	$("#header").show();
+	$('#footer').html('<a href="#" data-role="button" class="ui-block-a" id="add-button"><i class="fa fa-plus" /></a>');
+	$("#add-button").button();
+
 	var events = [];
 	$('body').removeClass();
 	events.push({
