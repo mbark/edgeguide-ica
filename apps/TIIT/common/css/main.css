@@ -11,6 +11,6 @@ body {
 	width: 320px;
 }
 
-.ui-content {
-	margin-top: 0%;
+.ui-page {
+    padding-top: 40px !important;
 }
