@@ -1,5 +1,6 @@
 currentPage = {};
 currentPage.init = function() {
+	$("#header-title").text("Collaborators");
 	var collaborators= [];
 	collaborators.push({
 		name : "Jonas Sköld",
