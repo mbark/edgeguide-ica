@@ -3,7 +3,6 @@
  */
 currentPage = {};
 currentPage.init = function() {
-	alert('login');
 };
 
 currentPage.loadPage = function(page){
